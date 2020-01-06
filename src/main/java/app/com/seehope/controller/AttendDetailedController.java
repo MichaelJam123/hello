@@ -110,7 +110,7 @@ public class AttendDetailedController {
 
     }
 
-    @ApiOperation("通过早退状态获取出席详情记录")
+    @ApiOperation("通过迟到状态获取出席详情记录")
     @GetMapping("/getAttendDetailedByLate/{page}/{pageSize}/{taskId}/{late}")
     public CommonResponse getAttendDetailedByLate(@PathVariable("late") Integer late,
                                                    @PathVariable("taskId") Integer taskId,
