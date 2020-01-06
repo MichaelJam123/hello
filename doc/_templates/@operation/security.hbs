@@ -1,0 +1,11 @@
+{{#if this.security}}
+#### {{i18n "operation.security"}}
+
+{{i18n "operation.auth"}} | {{i18n "operation.scope"}}
+:-----:  | :-------
+{{#this.security}}
+{{#each this}}
+[{{@key}}](security.md#{{lower_ @key}}) | {{> @operation/scopes}}
+{{/each}}
+{{/this.security}}
+{{/if}}

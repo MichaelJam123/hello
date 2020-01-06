@@ -1,0 +1,24 @@
+{
+    "api": {
+        "name": "hello"
+    },
+    "docker": {
+        "image": "services/hello"
+    },
+
+    "db": {
+        "migrate" : true,
+        "console" : true,
+        "type"     : "mysql",
+        "host"     : "101.37.66.98",
+        "port"     : 3306,
+        "schema"   : "punchclock",
+        "username" : "root",
+        "password" : "123456"
+    },
+    "redis:":{
+        "host" : "101.37.66.98",
+        "port" : 6379,
+        "password" : "123456"
+    }
+}

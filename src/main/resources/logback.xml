@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <logger name="leap.core.DefaultAppConfigSource" level="WARN"/>
+    <logger name="leap.core.DefaultAppHome"         level="WARN"/>
+    <logger name="leap.web.DefaultAppHandler"       level="WARN"/>
+    <logger name="leap.web.AppBootstrap"            level="WARN"/>
+    <logger name="leap.db"                          level="DEBUG"/> 
+
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+</configuration>

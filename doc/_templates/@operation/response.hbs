@@ -1,0 +1,7 @@
+#### {{i18n "responses"}}
+
+{{i18n "res.status"}}|{{i18n "res.desc"}}|{{i18n "res.schema"}}|{{i18n "res.headers"}}
+:---|:---|:---
+{{#each responses}}
+{{@key}}|{{this.description}}|{{> @types/schema}}{{^schema}}{{i18n "res.schema.none"}}{{/schema}}|{{> @operation/headers}}
+{{/each}}

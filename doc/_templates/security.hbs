@@ -1,0 +1,18 @@
+# {{i18n "security"}}
+
+## <a id="authentication"></a>{{i18n "authentication"}}
+> {{i18n "sec.swagger2_ref"}}
+
+{{#each securityDefinitions}}
+{{> @security/oauth2}}{{> @security/apikey}}
+{{/each}}
+
+## <a id="permissions"></a>{{i18n "permissions"}}
+{{#if permissions}}
+{{i18n "sec.perm_scope"}} | {{i18n "sec.perm_desc"}}
+:----|:----
+{{#each permissions}}
+<a id="perm_{{lower_ @key}}"></a>{{@key}} | {{.}}
+{{/each}}
+{{/if}}
+{{^permissions}}{{i18n "none"}}{{/permissions}}

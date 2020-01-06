@@ -1,0 +1,11 @@
+{
+    "steps": [
+        {
+            "type": "rest",
+            "exec": "GET /",
+            "asserts": [
+                "Assert.equals(200, rest.response.status)"
+            ]
+        }
+    ]
+}

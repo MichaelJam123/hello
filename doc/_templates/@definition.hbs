@@ -1,0 +1,27 @@
+{{{this.description}}}
+
+{{#if this.properties}}
+#### {{i18n "properties"}}
+
+{{i18n "props.name"}}|{{i18n "props.type"}}|{{i18n "props.required"}}|{{i18n "props.desc"}}
+---|:---|:---:|:---
+{{#each this.properties}}
+{{^this.x-relation}}
+{{@key}}|{{> @type}}{{> @enum}}|{{> @required}}|{{{this.description}}}{{^this.description}}{{this.title}}{{/this.description}}
+{{/this.x-relation}}
+{{/each}}
+{{/if}}
+
+{{^this.properties}}
+{{#if this.enum}}
+*enum{{#if this.type}}&lt;{{this.type}}&gt;{{/if}}* :
+{{#enum}}
+- {{.}}
+{{/enum}}
+{{/if}}
+{{^enum}}
+```json
+{{json .}}
+```
+{{/enum}}
+{{/this.properties}}

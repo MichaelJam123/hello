@@ -1,0 +1,27 @@
+# {{i18n "info"}}
+
+{{#info.version}}
+#### {{i18n "version_info"}}
+
+*{{i18n "version"}}*: `{{.}}`
+
+{{/info.version}}
+
+{{#basePath}}
+#### {{i18n "base_path_info"}}
+*{{i18n "base_path"}}*: `{{.}}`
+{{/basePath}}
+
+{{#if consumes}}
+#### Consumes
+{{#consumes}}
+- `{{.}}`
+{{/consumes}}
+{{/if}}
+
+{{#if produces}}
+#### Produces
+{{#produces}}
+- `{{.}}`
+{{/produces}}
+{{/if}}

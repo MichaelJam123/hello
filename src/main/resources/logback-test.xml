@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- output pattern -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="${CONSOLE_LOG_PATTERN:-%clr(%d{HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(%-30.30logger{30}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+    <!-- custom jmms -->
+    <logger name="leap.core.DefaultAppConfigSource"   level="WARN"/>
+    <logger name="leap.core.DefaultAppHome"           level="WARN"/>
+    <logger name="leap.web.DefaultAppHandler"         level="WARN"/>
+    <logger name="leap.web.AppBootstrap"              level="INFO"/>
+    <logger name="leap.db"                            level="DEBUG"/>
+    <logger name="leap.db.cp"                         level="INFO"/>
+    <logger name="leap.db.platform"                   level="INFO"/>
+    <logger name="leap.db.platform.GenericDbMetadata" level="INFO"/>
+    <logger name="jmms.engine"                        level="DEBUG"/>
+    <logger name="jmms.engine.Engine"                 level="INFO"/>
+    <logger name="jmms.engine.config"                 level="INFO"/>
+
+    <!-- custom flayway -->
+    <logger name="org.flywaydb.core.internal.util.VersionPrinter"      level="WARN"/>
+    <logger name="org.flywaydb.core.internal.database.DatabaseFactory" level="WARN"/>    
+
+    <!-- custom spring -->
+    <logger name="org.springframework"                                                                      level="WARN"/>
+    <logger name="org.apache.catalina.core.StandardService"                                                 level="WARN"/>
+    <logger name="org.apache.catalina.core.StandardEngine"                                                  level="WARN"/>
+    <logger name="org.apache.catalina.core.ContainerBase"                                                   level="WARN"/>
+    <logger name="org.springframework.beans.factory.support.DisposableBeanAdapter"                          level="ERROR"/>
+    <logger name="org.springframework.boot.SpringApplication"                                               level="INFO"/>
+    <logger name="org.springframework.boot.web.servlet"                                                     level="WARN"/>
+    <logger name="org.springframework.boot.web.filter"                                                      level="INFO"/>
+    <logger name="org.springframework.boot.context.embedded"                                                level="WARN"/>
+    <logger name="org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext"  level="WARN"/>
+    <logger name="org.springframework.boot.devtools.restart.Restarter"                                      level="INFO"/>
+    <logger name="org.springframework.boot.context.config.ConfigFileApplicationListener"                    level="INFO"/>
+    <logger name="org.springframework.boot.logging.ClasspathLoggingApplicationListener"                     level="INFO"/>
+    <logger name="org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer" level="INFO"/>
+
+    <!--default -->
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+</configuration>

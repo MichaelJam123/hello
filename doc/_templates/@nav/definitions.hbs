@@ -1,0 +1,6 @@
+{{#if definitions}}
+* [{{i18n "definitions"}}](definitions.md)
+{{#each definitions}}
+  * [{{this.title}}](definitions.md#{{lower_ @key}})
+{{/each}}
+{{/if}}

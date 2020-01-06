@@ -1,0 +1,114 @@
+{
+    "name": "AttendInfo",
+    "title": "AttendInfo",
+    "table": "attend_info",
+    "fields": {
+        "attendId": {
+            "name": "attendId",
+            "title": "attendId",
+            "required": true,
+            "identity": true,
+            "increment": false,
+            "unique": false,
+            "column": "attend_id",
+            "type": "integer",
+            "length": 0,
+            "precision": 0,
+            "scale": 0,
+            "columnNull": false
+        },
+        "attendTime": {
+            "name": "attendTime",
+            "title": "attendTime",
+            "required": false,
+            "identity": false,
+            "increment": false,
+            "unique": false,
+            "column": "attend_time",
+            "type": "timestamp",
+            "length": 0,
+            "precision": 0,
+            "scale": 0,
+            "columnNull": true
+        },
+        "attendAddress": {
+            "name": "attendAddress",
+            "title": "attendAddress",
+            "required": false,
+            "identity": false,
+            "increment": false,
+            "unique": false,
+            "column": "attend_address",
+            "type": "varchar",
+            "length": 45,
+            "precision": 0,
+            "scale": 0,
+            "columnNull": true
+        },
+        "empAttend": {
+            "name": "empAttend",
+            "title": "empAttend",
+            "required": false,
+            "identity": false,
+            "increment": false,
+            "unique": false,
+            "column": "emp_attend",
+            "type": "integer",
+            "length": 0,
+            "precision": 0,
+            "scale": 0,
+            "columnNull": true
+        },
+        "taskAttend": {
+            "name": "taskAttend",
+            "title": "taskAttend",
+            "required": false,
+            "identity": false,
+            "increment": false,
+            "unique": false,
+            "column": "task_attend",
+            "type": "integer",
+            "length": 0,
+            "precision": 0,
+            "scale": 0,
+            "columnNull": true
+        }
+    },
+    "relations": {
+        "attend_info_ibfk_1": {
+            "name": "attend_info_ibfk_1",
+            "title": "attend_info_ibfk_1",
+            "type": "many-to-one",
+            "targetEntity": "EmployeeInfo",
+            "optional": true,
+            "foreignKeyName": "attend_info_ibfk_1",
+            "joinFields": [
+                {
+                    "local": "empAttend",
+                    "target": "employeeId"
+                }
+            ]
+        },
+        "attend_info_ibfk_2": {
+            "name": "attend_info_ibfk_2",
+            "title": "attend_info_ibfk_2",
+            "type": "many-to-one",
+            "targetEntity": "TaskInfo",
+            "optional": true,
+            "foreignKeyName": "attend_info_ibfk_2",
+            "joinFields": [
+                {
+                    "local": "taskAttend",
+                    "target": "taskId"
+                }
+            ]
+        }
+    },
+    "keys": {},
+    "filters": {},
+    "protocols": {},
+    "onEvents": {},
+    "queries": {},
+    "rowSecurities": {},
+    "logicalDeletes": {}
+}

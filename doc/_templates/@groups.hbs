@@ -1,0 +1,15 @@
+{{#ifeq groups.size 1}}
+{{#each groups}}
+{{#each operations}}
+  * [{{this.title}}](operations.md#{{this.id}})
+{{/each}}
+{{/each}}
+{{/ifeq}}
+{{#ifneq groups.size 1}}
+{{#each groups}}
+  * [{{> @group/title}}](operations.md#{{lower_ name}})
+  {{#each operations}}
+    * [{{this.title}}](operations.md#{{this.id}})
+  {{/each}}
+{{/each}}
+{{/ifneq}}

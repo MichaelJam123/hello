@@ -1,0 +1,19 @@
+<!--Content Type-->
+{{#if this.consumes}}
+#### Content-Type
+{{#each consumes}}
+- `{{.}}`
+{{/each}}
+{{/if}}
+
+<!--Parameters-->
+#### {{i18n "parameters"}}
+
+{{#if parameters}}
+{{i18n "params.name"}}|{{i18n "params.type"}}|{{i18n "params.required"}}|{{i18n "params.in"}}|{{i18n "params.desc"}}
+---|:---|:---:|:---:|:---
+{{#parameters}}
+{{this.name}}|{{> @type}}|{{> @required}}|{{in}}|{{{this.description}}}
+{{/parameters}}
+{{/if}}
+{{^parameters}}{{i18n "params.none"}}{{/parameters}}

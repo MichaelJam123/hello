@@ -1,0 +1,6 @@
+# {{i18n "definitions"}}
+
+{{#each definitions}}
+## <a id="{{lower_ @key}}"></a>{{this.title}}{{#ifneq this.title @key}} (*{{@key}}*){{/ifneq}}
+{{> @definition}}
+{{/each}} 

@@ -1,0 +1,21 @@
+<!--demo-->
+#### **{{i18n "demo.requests"}}**
+```
+{{method}} {{swagger_path path parameters}}
+{{#if this.consumes}}
+Content-Type: {{#each consumes}}{{.}}{{/each}}
+{{/if}}
+
+{{#parameters}}{{#this.schema}}{{> @schematype}}{{/this.schema}}{{/parameters}}
+
+```
+
+#### **{{i18n "demo.responses"}}**
+```
+{{#if this.produces}}
+Content-Type: {{#each produces}}{{.}}{{/each}}
+{{/if}}
+
+{{#each responses}}{{#this.schema}}{{> @schematype}}{{/this.schema}}{{/each}}
+
+```

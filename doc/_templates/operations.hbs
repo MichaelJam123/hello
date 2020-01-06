@@ -1,0 +1,21 @@
+# {{i18n "operations"}}
+
+{{#each groups}}
+{{#ifneq groups.size 1}}
+## <a id="{{lower_ this.name}}"></a>{{> @group/title}}
+{{/ifneq}}
+
+{{#each operations}}
+{{#operationId}}<a id="{{operationId}}"></a>{{/operationId}}
+### <a id="{{id}}"></a>{{title}}
+{{> @operation/base}}
+
+{{> @operation/request}}
+
+{{> @operation/response}}
+
+{{> @operation/security}}
+
+{{/each}}
+
+{{/each}}

@@ -1,0 +1,12 @@
+{{#ifeq this.type "oauth2"}}
+
+## <a id="{{lower_ @key}}"></a>{{@key}}
+
+```json
+{
+    "type": "oauth2",
+    "flow": "{{this.flow}}"
+}
+```
+
+{{/ifeq}}
